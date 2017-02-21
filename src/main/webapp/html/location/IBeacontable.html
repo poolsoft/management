@@ -1,0 +1,47 @@
+<section class="content-header">
+	<h1>IBeacon管理</h1>
+	</section>
+	<section class="content">
+	 <div class="row">
+        <div class="col-xs-12">
+          <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">IBeacon信息</h3>
+
+              <div class="box-tools">
+                <div class="input-group input-group-sm" style="width: 150px;">
+                  <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
+
+                  <div class="input-group-btn">
+                    <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body table-responsive no-padding" ng-controller="ibeaconCtrl">
+              <table class="table table-hover">
+                <tr>
+                  <th>序号</th>
+                  <th>UUID</th>
+                  <th>Maior</th>
+                  <th>Minor</th>
+                  <th>RSSI</th>
+                  <th>POWER</th>
+                  <th>BAT</th>
+                </tr>
+                <tr ng-repeat="x in ibeacons">
+                	<td>{{$index+1}}</td>
+                	<td>{{x.UUID}}</td>
+                	<td>{{x.Maior}}</td>
+                	<td>{{x.Minor}}</td>
+                	<td>{{x.RSSI}}</td>
+                	<td>{{x.POWER}}</td>
+                	<td>{{x.BAT}}</td>
+                </tr>
+                </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

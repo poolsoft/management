@@ -33,10 +33,11 @@
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
-
-  <header class="main-header" ng-include="'html/header.html'">
-   
+<div ng-controller="headerCtrl">
+	<header class="main-header" ng-include="'html/header.html'">
   </header>
+</div>
+  
   
   <aside class="main-sidebar" ng-include="'html/aside.html'">
     
@@ -87,6 +88,7 @@
 <script src="js/app.min.js"></script>
 <!-- <script src="js/dashboard.js"></script> -->
 <script src="js/demo.js"></script>
+<script src="js/cookie.js"></script>
 
 <script src="js/leaflet.js"></script>
 <script src="js/leaflet-routing-machine.js"></script>
@@ -102,10 +104,9 @@
 <script src="controller/peichartCtrl.js"></script>
 <script src="controller/userCtrl.js"></script>
 <script>
-// 	app.controller("dashboardCtrl",function($scope,dashboardCtrl,peichartCtrl){
-// 		dashboardCtrl.initBarchart();
-// 		peichartCtrl.initpiechart();
-// 	});
+	app.controller("headerCtrl",function($scope){
+		
+	});
 </script>
 </body>
 </html>

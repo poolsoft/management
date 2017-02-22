@@ -95,7 +95,7 @@ body {
     height: 100%;
     top: 0;
     left: 0;
-    background: url("../img/blur-bg.jpg") no-repeat center center;
+    background: url("img/blur-bg.jpg") no-repeat center center;
     background-size: cover;
     will-change: transform;
     z-index: -1; }
@@ -118,7 +118,7 @@ body.mobile {
     height: 100%;
     top: 0;
     left: 0;
-    background: url("../img/blur-bg.jpg") no-repeat center center;
+    background: url("img/blur-bg.jpg") no-repeat center center;
     background-size: cover;
     will-change: transform;
     z-index: -1; }
@@ -226,10 +226,10 @@ a {
   display: block; }
 
 .icon-up {
-  background: url("../assets/img/arrow-green-up.svg") no-repeat 0 0; }
+  background: url("img/arrow-green-up.svg") no-repeat 0 0; }
 
 .icon-down {
-  background: url("../assets/img/arrow-red-down.svg") no-repeat 0 0; }
+  background: url("img/arrow-red-down.svg") no-repeat 0 0; }
 
 .disable-text-selection {
   -webkit-touch-callout: none;

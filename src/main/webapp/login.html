@@ -116,8 +116,11 @@
 					}
 				}
 				if(flag){
+// 					addCookie("userName",$scope.user.name,2);
+					localStorage.removeItem("userName");
+					localStorage.userName = $scope.user.name;
+					document.write(localStorage.userName);
 					window.location.href="index.html";
-					addCookie("userName",$scope.user.name,2);
 				}else{
 					$scope.errorImg="用户名或密码错误";
 				}

@@ -1,8 +1,8 @@
 app.controller("barchartCtrl",function($scope){
 	function initBarchart(){
-		var myChart = echarts.init(document.getElementById("barchart"));
+		var barChart = echarts.init(document.getElementById("barchart"));
 		var data = [20, 52, 200, 334, 390, 330, 220];
-		var option = {
+		var barOption = {
 			    color: ['#3398DB'],
 			    tooltip : {
 			        trigger: 'axis',
@@ -48,7 +48,7 @@ app.controller("barchartCtrl",function($scope){
 			        }
 			    ]
 			};
-		myChart.setOption(option);
+		barChart.setOption(barOption);
 	}
 	
 	initBarchart();

@@ -1,7 +1,7 @@
 app.controller('peichartCtrl',function($scope){
 	function initpiechart(){
-		var myChart = echarts.init(document.getElementById("piechart"));
-		var option = {
+		var peiChart = echarts.init(document.getElementById("piechart"));
+		var peiOption = {
 			    title : {
 			        text: '某站点用户访问来源',
 			        subtext: '纯属虚构',
@@ -40,7 +40,7 @@ app.controller('peichartCtrl',function($scope){
 			    ]
 			};
 		
-			myChart.setOption(option);
+		peiChart.setOption(peiOption);
 	}
 	
 	initpiechart();

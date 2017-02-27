@@ -294,7 +294,7 @@
             <div class="box-body table-responsive no-padding" ng-controller="userCtrl">
               <table class="table table-hover">
                 <tr>
-                  <th>序号</th>
+                  <th></th>
                   <th>ID</th>
                   <th>姓名</th>
                   <th>年龄</th>
@@ -305,15 +305,34 @@
                 </tr>
                 <tr ng-repeat="x in users">
                 	<td>{{$index+1}}</td>
-                	<td>{{x.id}}</td>
-                	<td>{{x.name}}</td>
-                	<td>{{x.age}}</td>
-                	<td>{{x.gender}}</td>
-                	<td>{{x.telnum}}</td>
-                	<td>{{x.other}}</td>
-                	<td><button class="btn" ng-click="">
-				          <span class="glyphicon glyphicon-pencil"></span>编辑
-				        </button>
+                	<td><input id="input{{x.id}}" readonly value="{{x.id}}" class="inactive input{{x.id}}"></td>
+<!--                 	<td>{{x.id}}</td> -->
+<!--                 	<td>{{x.name}}</td> -->
+                	<td><input readonly value="{{x.name}}" class="inactive"></td>
+<!--                 	<td>{{x.age}}</td> -->
+                	<td><input readonly value="{{x.age}}" class="inactive"></td>
+<!--                 	<td>{{x.gender}}</td> -->
+                	<td><input readonly value="{{x.gender}}" class="inactive"></td>
+<!--                 	<td>{{x.telnum}}</td> -->
+                	<td><input readonly value="{{x.telnum}}" class="inactive"></td>
+<!--                 	<td>{{x.other}}</td> -->
+                	<td><input readonly value="{{x.other}}" class="inactive"></td>
+                	<td>
+<!--                 		<button class="btn" ng-click=""> -->
+<!-- 				          <span class="glyphicon glyphicon-pencil"></span>编辑 -->
+<!-- 				        </button> -->
+				        <edit class="btn" ng-model="x" ng-show="!isShow">
+				        	<span class="glyphicon glyphicon-pencil">编辑</span>
+				        </edit>
+				        <update class="btn" ng-show="isShow" ng-model="x">
+				        	<span class="glyphicon glyphicon-pencil">保存</span>
+				        </update>
+				        <cancel class="btn" ng-show="isShow" ng-model="x">
+				        	<span>取消</span>
+				        </cancel>
+				        <delete class="btn" ng-model="x" ng-show="!isShow">
+				        	<span>删除</span>
+				        </delete>
 				    </td>
                 </tr>
 <!--                 <tr> -->

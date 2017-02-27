@@ -28,6 +28,15 @@
   	body{
   		background-color: #222d32;
   	}
+  	
+  	.active{
+  		border: 1px solid #5D5DE0;
+   		background-color: #f4f4f4;
+  	}
+  	.inactive{
+  		border: 0px solid #fff;
+  		background-color: #fff;
+  	}
   </style>
 
 </head>
@@ -109,10 +118,13 @@
 	});
 	
 	var getUserName = localStorage.userName;
-	console.log(getUserName);
 	if(!getUserName){
 		window.location.href = "login.html";
 	}
+	
+// 	window.onunload = function(){
+// 		localStorage.removeItem("userName");
+// 	}
 </script>
 </body>
 </html>

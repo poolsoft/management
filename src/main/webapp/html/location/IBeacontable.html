@@ -22,22 +22,43 @@
             <div class="box-body table-responsive no-padding" ng-controller="ibeaconCtrl">
               <table class="table table-hover">
                 <tr>
-                  <th>序号</th>
-                  <th>UUID</th>
+                  <th></th>
+                  <th>ibeaconID</th>
                   <th>Maior</th>
                   <th>Minor</th>
                   <th>RSSI</th>
                   <th>POWER</th>
                   <th>BAT</th>
+                  <th></th>
                 </tr>
-                <tr ng-repeat="x in ibeacons">
+                <tr ng-repeat="ibeacon in ibeacons">
                 	<td>{{$index+1}}</td>
-                	<td>{{x.UUID}}</td>
-                	<td>{{x.Maior}}</td>
-                	<td>{{x.Minor}}</td>
-                	<td>{{x.RSSI}}</td>
-                	<td>{{x.POWER}}</td>
-                	<td>{{x.BAT}}</td>
+                	<td><input style="width:100%" ng-model="ibeacon.ibeaconID" readonly class="inactive input{{ibeacon.ibeaconID}}"></td>
+<!--                 	<td>{{x.UUID}}</td> -->
+<!--                 	<td>{{x.Maior}}</td> -->
+                	<td><input style="width:50px" ng-model="ibeacon.Maior" readonly class="inactive input{{ibeacon.ibeaconID}}"></td>
+<!--                 	<td>{{x.Minor}}</td> -->
+                	<td><input style="width:50px" ng-model="ibeacon.Minor" readonly class="inactive input{{ibeacon.ibeaconID}}"></td>
+<!--                 	<td>{{x.RSSI}}</td> -->
+                	<td><input ng-model="ibeacon.RSSI" readonly class="inactive input{{ibeacon.ibeaconID}}"></td>
+<!--                 	<td>{{x.POWER}}</td> -->
+                	<td><input ng-model="ibeacon.POWER" readonly class="inactive input{{ibeacon.ibeaconID}}"></td>
+<!--                 	<td>{{x.BAT}}</td> -->
+                	<td><input ng-model="ibeacon.BAT" readonly class="inactive input{{ibeacon.ibeaconID}}"></td>
+                	<td>
+                		<edit class="btn btn-primary" ng-model="ibeacon" ng-show="!isShow">
+				        	<span class="glyphicon glyphicon-pencil">编辑</span>
+				        </edit>
+				        <update class="btn btn-success" ng-show="isShow" ng-model="ibeacon">
+				        	<span class="glyphicon glyphicon-pencil">保存</span>
+				        </update>
+				        <cancel class="btn btn-warning" ng-show="isShow" ng-model="ibeacon">
+				        	<span>取消</span>
+				        </cancel>
+				        <delete class="btn btn-danger" ng-model="ibeacon" ng-show="!isShow">
+				        	<span>删除</span>
+				        </delete>
+                	</td>
                 </tr>
                 </table>
             </div>

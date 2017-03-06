@@ -285,7 +285,7 @@
                   <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
 
                   <div class="input-group-btn">
-                    <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                    <button type="submit" class="btn btn-default btn-info"><i class="fa fa-search"></i></button>
                   </div>
                 </div>
               </div>
@@ -301,36 +301,37 @@
                   <th>性别</th>
                   <th>电话号码</th>
                   <th>其他</th>
-                  <th>操作</th>
+                  <th></th>
+<!--                   <th>操作</th> -->
                 </tr>
-                <tr ng-repeat="x in users">
+                <tr ng-repeat="user in users">
                 	<td>{{$index+1}}</td>
-                	<td><input id="input{{x.id}}" readonly value="{{x.id}}" class="inactive input{{x.id}}"></td>
+                	<td><input ng-model="user.id" readonly class="inactive input{{user.id}}"></td>
 <!--                 	<td>{{x.id}}</td> -->
 <!--                 	<td>{{x.name}}</td> -->
-                	<td><input readonly value="{{x.name}}" class="inactive"></td>
+                	<td><input readonly ng-model="user.name" class="inactive input{{user.id}}"></td>
 <!--                 	<td>{{x.age}}</td> -->
-                	<td><input readonly value="{{x.age}}" class="inactive"></td>
+                	<td><input readonly ng-model="user.age" class="inactive input{{user.id}}"></td>
 <!--                 	<td>{{x.gender}}</td> -->
-                	<td><input readonly value="{{x.gender}}" class="inactive"></td>
+                	<td><input readonly ng-model="user.gender" class="inactive input{{user.id}}"></td>
 <!--                 	<td>{{x.telnum}}</td> -->
-                	<td><input readonly value="{{x.telnum}}" class="inactive"></td>
+                	<td><input readonly ng-model="user.telnum" class="inactive input{{user.id}}"></td>
 <!--                 	<td>{{x.other}}</td> -->
-                	<td><input readonly value="{{x.other}}" class="inactive"></td>
+                	<td><input readonly ng-model="user.other" class="inactive input{{user.id}}"></td>
                 	<td>
 <!--                 		<button class="btn" ng-click=""> -->
 <!-- 				          <span class="glyphicon glyphicon-pencil"></span>编辑 -->
 <!-- 				        </button> -->
-				        <edit class="btn" ng-model="x" ng-show="!isShow">
+				        <edit class="btn btn-primary" ng-model="user" ng-show="!isShow">
 				        	<span class="glyphicon glyphicon-pencil">编辑</span>
 				        </edit>
-				        <update class="btn" ng-show="isShow" ng-model="x">
+				        <update class="btn btn-success" ng-show="isShow" ng-model="user">
 				        	<span class="glyphicon glyphicon-pencil">保存</span>
 				        </update>
-				        <cancel class="btn" ng-show="isShow" ng-model="x">
+				        <cancel class="btn btn-warning" ng-show="isShow" ng-model="user">
 				        	<span>取消</span>
 				        </cancel>
-				        <delete class="btn" ng-model="x" ng-show="!isShow">
+				        <delete class="btn btn-danger" ng-model="user" ng-show="!isShow">
 				        	<span>删除</span>
 				        </delete>
 				    </td>

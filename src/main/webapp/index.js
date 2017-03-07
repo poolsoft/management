@@ -18,6 +18,10 @@ app.config(function($routeProvider){
     	templateUrl: 'html/car/cartable.html',
     	controller: 'carCtrl'
     })
+    .when('/position',{
+    	templateUrl: 'html/position/position.html',
+    	controller: 'positionCtrl'
+    })
     .when('/map',{
     	templateUrl: 'html/map/map.html',
     	controller: 'mapCtrl'

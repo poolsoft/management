@@ -1,6 +1,6 @@
 <section class="content-header">
       <h1>
-        	用户管理
+        	位置信息
 <!--         <small>preview of simple tables</small> -->
       </h1>
 <!--       <ol class="breadcrumb"> -->
@@ -278,7 +278,7 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">用户信息</h3>
+              <h3 class="box-title">位置信息</h3>
 
               <div class="box-tools">
                 <div class="input-group input-group-sm" style="width: 150px;">
@@ -291,31 +291,35 @@
               </div>
             </div>
             <!-- /.box-header -->
-            <div class="box-body table-responsive no-padding" ng-controller="userCtrl">
+            <div class="box-body table-responsive no-padding" ng-controller="positionCtrl">
               <table class="table table-hover">
                 <tr>
                   <th></th>
-                  <th>userName</th>
-                  <th>password</th>
-                  <th>phoneNumber</th>
-                  <th>email</th>
-                  <th>createTime</th>
+                  <th>equipmentNum</th>
+                  <th>frameNum</th>
+                  <th>electricity</th>
+                  <th>longitude</th>
+                  <th>latitude</th>
+                  <th>positioningMode</th>
+                  <th>positioningTime</th>
                   <th></th>
 <!--                   <th>操作</th> -->
                 </tr>
-                <tr ng-repeat="user in users">
+                <tr ng-repeat="position in positions">
                 	<td>{{$index+1}}</td>
-                	<td><input ng-model="user.userName" readonly class="inactive input{{user.userName}}"></td>
+                	<td><input ng-model="position.equipmentNum" readonly class="inactive input{{position.equipmentNum}}"></td>
 <!--                 	<td>{{x.id}}</td> -->
 <!--                 	<td>{{x.name}}</td> -->
-                	<td><input readonly ng-model="user.password" class="inactive input{{user.userName}}"></td>
+                	<td><input readonly ng-model="position.frameNum" class="inactive input{{position.equipmentNum}}"></td>
 <!--                 	<td>{{x.age}}</td> -->
-                	<td><input readonly ng-model="user.phoneNumber" class="inactive input{{user.userName}}"></td>
+                	<td><input readonly ng-model="position.electricity" class="inactive input{{position.equipmentNum}}"></td>
 <!--                 	<td>{{x.gender}}</td> -->
-                	<td><input readonly ng-model="user.email" class="inactive input{{user.userName}}"></td>
+                	<td><input readonly ng-model="position.longitude" class="inactive input{{position.equipmentNum}}"></td>
 <!--                 	<td>{{x.telnum}}</td> -->
-                	<td><input readonly ng-model="user.createTime" class="inactive input{{user.userName}}"></td>
+                	<td><input readonly ng-model="position.latitude" class="inactive input{{position.equipmentNum}}"></td>
 <!--                 	<td>{{x.other}}</td> -->
+					<td><input readonly ng-model="positin.positioningModel" class="inactive input{{position.equipmentNum}}"></td>
+					<td><input readonly ng-model="positin.positioningTime" class="inactive input{{position.equipmentNum}}"></td>
                 	<td>
 <!--                 		<button class="btn" ng-click=""> -->
 <!-- 				          <span class="glyphicon glyphicon-pencil"></span>编辑 -->

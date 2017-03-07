@@ -1,10 +1,19 @@
-app.controller("carCtrl",function($scope,$http){
+//app.controller("carCtrl",function($scope,$http){
+//	$scope.master = {};
+//	$scope.isShow = false;
+//	$http.get("../resources/car/car.json").success(function(data){
+//		$scope.cars = data.cars;
+//	});
+//	
+//});
+
+app.controller("carCtrl",function($scope,carService){
 	$scope.master = {};
 	$scope.isShow = false;
-	$http.get("../resources/car/car.json").success(function(data){
-		$scope.cars = data.cars;
+	carService.getCarInfos().then(function(data){
+		console.log(data);
+		$scope.cars = data;
 	});
-	
 });
 
 app.directive("edit",function($document){

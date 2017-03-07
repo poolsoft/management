@@ -22,7 +22,7 @@
             <div class="box-body table-responsive no-padding" ng-controller="carCtrl">
               <table class="table table-hover">
                 <tr>
-                  <th>序号</th>
+                  <th></th>
                   <th>车架号</th>
                   <th>发动机编号</th>
                   <th>生产日期</th>
@@ -31,12 +31,12 @@
                 </tr>
                 <tr ng-repeat="car in cars">
                 	<td>{{$index+1}}</td>
-                	<td><input ng-model="car.carFrameNum" readonly class="inactive input{{car.carFrameNum}}"></td>
+                	<td><input ng-model="car.frameNum" readonly class="inactive input{{car.frameNum}}"></td>
                 	
 <!--                 	<td>{{x.carFrameNum}}</td> -->
-					<td><input ng-model="car.motorNum" readonly class="inactive input{{car.carFrameNum}}"></td>
+					<td><input ng-model="car.engineNum" readonly class="inactive input{{car.frameNum}}"></td>
 <!--                 	<td>{{x.motorNum}}</td> -->
-                	<td><input ng-model="car.createDate" readonly class="inactive input{{car.carFrameNum}}"></td>
+                	<td><input ng-model="car.productionTime" readonly class="inactive input{{car.frameNum}}"></td>
 <!--                 	<td>{{x.createDate}}</td> -->
                 	<td>
                 		<edit class="btn btn-primary" ng-model="car" ng-show="!isShow">
